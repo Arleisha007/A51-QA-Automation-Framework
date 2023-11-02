@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -25,7 +26,8 @@ public class LoginTests extends BaseTest {
         provideEmail("demo@class.com");
         providePassword("te$t$tudent");
         clickSubmit();
-        WebElement avatar = driver.findElement(By.cssSelector("img[class='avatar']"));
+        WebElement avatar = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img[class='avatar']")));
+        //WebElement avatar = driver.findElement(By.cssSelector("img[class='avatar']"));
         //Expected Result
         Assert.assertTrue(avatar.isDisplayed());
     }
@@ -36,7 +38,8 @@ public class LoginTests extends BaseTest {
         providePassword("te$t$tudent");
         clickSubmit();
         //comparison
-        WebElement avatar = driver.findElement(By.cssSelector("img[class='avatar']"));
+        WebElement avatar = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img[class='avatar']")));
+        //WebElement avatar = driver.findElement(By.cssSelector("img[class='avatar']"));
         //Expected Result
         Assert.assertTrue(avatar.isDisplayed());
     }
