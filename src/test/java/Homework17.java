@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class Homework17 extends BaseTest{
 
     @Test
-    public void addSongToPlaylist() throws InterruptedException{
+    public void addSongToPlaylist() {
 
         String expectedAddedSongToPlaylistSuccessMsg = "Added 1 song into \"AutoLesson 17.\"";
         navigateToLoginPage();
@@ -27,34 +27,34 @@ public class Homework17 extends BaseTest{
         Assert.assertEquals(getAddToPlaylistSuccessMsg(), expectedAddedSongToPlaylistSuccessMsg);
     }
 
-    public void searchSong(String name) throws InterruptedException{
+    public void searchSong(String name) {
         WebElement searchField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[type='search']")));
         //WebElement searchField = driver.findElement(By.cssSelector("[type='search']"));
         searchField.clear();
         searchField.sendKeys(name);
     }
 
-    public void clickViewAllBtn() throws InterruptedException{
+    public void clickViewAllBtn() {
         WebElement viewAllBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[data-test='view-all-songs-btn']")));
         //WebElement viewAllBtn = driver.findElement(By.cssSelector("button[data-test='view-all-songs-btn']"));
         viewAllBtn.click();
     }
 
-    public void selectFirstSong() throws InterruptedException{
+    public void selectFirstSong() {
         WebElement firstSong = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#songResultsWrapper tr.song-item")));
         //WebElement firstSong = driver.findElement(By.cssSelector("#songResultsWrapper tr.song-item"));
         firstSong.click();
         //Thread.sleep(2000);
     }
 
-    public void clickAddToBtn() throws InterruptedException{
+    public void clickAddToBtn() {
         WebElement addToButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#songResultsWrapper tr.song-item")));
         //WebElement addToButton = driver.findElement(By.cssSelector"#songResultsWrapper tr.song-item"));
         addToButton.click();
         //Thread.sleep(2000);
     }
 
-    public void choosePlaylist() throws InterruptedException{
+    public void choosePlaylist() {
         WebElement playlist = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//section[@id='songResultsWrapper']//li[contains(text(),'AutoLesson 17')]")));
         //WebElement playlist = driver.findElement(By.xpath("//section[@id='songResultsWrapper']//li[contains(text(),'AutoLesson 17')]"));
         playlist.click();

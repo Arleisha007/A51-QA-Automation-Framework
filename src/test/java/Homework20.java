@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class Homework20 extends BaseTest{
 
     @Test
-    public void deletePlaylist() throws InterruptedException {
+    public void deletePlaylist()  {
         String expectedDeletedPlaylistSuccessMsg = "Deleted playlist \"AutoTestL19.\"";
         navigateToLoginPage();
         provideEmail("demo@class.com");
@@ -18,13 +18,13 @@ public class Homework20 extends BaseTest{
         Assert.assertEquals(getDeletedPlaylistSuccessMsg(), expectedDeletedPlaylistSuccessMsg);
 
     }
-    public void openPlaylist() throws InterruptedException{
+    public void openPlaylist() {
         WebElement emptyPlaylist = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#playlists > ul > li:nth-child(5) > a")));
         //WebElement emptyPlaylist = driver.findElement(By.cssSelector("#playlists > ul > li:nth-child(5) > a"));
         emptyPlaylist.click();
 
     }
-    public void clickDeletePlaylistBtn() throws InterruptedException {
+    public void clickDeletePlaylistBtn()  {
         WebElement deletePlaylistBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".btn-delete-playlist")));
         //WebElement deletePlaylistBtn = driver.findElement(By.cssSelector(".btn-delete-playlist"));
         deletePlaylistBtn.click();
