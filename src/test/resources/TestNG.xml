@@ -6,8 +6,11 @@
     <test name="Example Test" preserve-order="false">
         <classes>
             <!-- <class name="LoginTests"/> -->
-            <class name="BaseTest"/>
-            <class name="Homework25"/>
+            <!--<class name="BaseTest"/> -->
+            <class name="Homework25">
+                    <methods>
+                        <include name="loginValidEmailPassword"/>
+                    </methods>
             <!-- <class name="Homework16"/> -->
             <!-- <class name="ProfileTests"/> -->
             <!-- <class name="Homework17"/> -->
@@ -15,6 +18,7 @@
             <!-- <class name="HomeTest"/> -->
             <!-- <class name="Homework21"/> -->
             <!-- <class name="Homework22"/> -->
+            </class>
         </classes>
     </test>
 </suite>
