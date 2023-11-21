@@ -8,6 +8,7 @@ public class Homework19 extends BaseTest{
     @Test
     public void deletePlaylist() throws InterruptedException {
         String expectedDeletedPlaylistSuccessMsg = "Deleted playlist \"AutoTestL19.\"";
+        String BaseURL = null;
         navigateToLoginPage(BaseURL);
         provideEmail("demo@class.com");
         providePassword("te$t$tudent");

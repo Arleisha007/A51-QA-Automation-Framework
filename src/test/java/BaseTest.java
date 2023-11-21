@@ -11,7 +11,6 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -26,7 +25,7 @@ import java.net.URL;
 import java.time.Duration;
 import java.util.UUID;
 
-import
+
 
 public class BaseTest {
 
@@ -120,15 +119,15 @@ public class BaseTest {
     }
     //close the browser after successful test
     @AfterMethod
-    public void tearDown(){
+    public void closeBrowser(){
         threadDriver.get().close();
         threadDriver.remove();
     }
     //reusable helper methods
 
     //navigates to login page
-    public void navigateToLoginPage(String baseURL){
-        driver.get(url);
+    public void navigateToLoginPage(String BaseURL){
+        getDriver().get(BaseURL);
     }
     //locates email input field and enters email address provided
     public void provideEmail(String email){
@@ -176,6 +175,4 @@ public class BaseTest {
         WebElement avatarIcon = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img[class='avatar']")));
         Assert.assertTrue(avatarIcon.isDisplayed());
     }
-
-
 }

@@ -19,7 +19,7 @@ public class LoginTests extends BaseTest {
 
         loginPage.provideEmail("demo@class.com");
         loginPage.providePassword("te$t$tudent");
-        loginPage.clickSubmit();
+        loginPage.clickSubmitBtn();
 
         Assert.assertTrue(homePage.getUserAvatar().isDisplayed());
     }
