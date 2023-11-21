@@ -9,6 +9,7 @@ public class ProfileTests extends BaseTest {
     @Test
     public void changeProfileName() throws InterruptedException{
 
+        String BaseURL = null;
         navigateToLoginPage(BaseURL);
         //Login
         provideEmail("demo@class.com");

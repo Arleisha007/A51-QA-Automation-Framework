@@ -5,13 +5,13 @@ import org.testng.annotations.Test;
 
 public class Homework25 extends BaseTest{
     @Test
-    public void loginValidEmailPassword(){
+    public void loginValidEmailPasswordTest(){
         LoginPage loginPage = new LoginPage(getDriver());
         HomePage homePage = new HomePage(getDriver());
 
         loginPage.provideEmail("demo@class.com");
         loginPage.providePassword("te$t$tudent");
-        loginPage.clickSubmit();
+        loginPage.clickSubmitBtn();
 
         Assert.assertTrue(homePage.getUserAvatar().isDisplayed());
     }
