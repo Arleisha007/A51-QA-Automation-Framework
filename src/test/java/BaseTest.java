@@ -47,7 +47,7 @@ public class BaseTest {
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         navigateToLoginPage(BaseURL);
     }
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() {
         return threadDriver.get();
     }
 
@@ -115,7 +115,7 @@ public class BaseTest {
         threadDriver.remove();
     }
 
-    public void navigateToLoginPage(String baseURL){
+    public void navigateToLoginPage(String BaseURL){
         driver.get(url);
     }
 

@@ -9,7 +9,7 @@ public class Homework25 extends BaseTest{
     public void loginValidEmailPassword(){
 
         //Steps
-        String BaseURL;
+        String BaseURL = null;
         navigateToLoginPage(BaseURL);
         provideEmail("demo@class.com");
         providePassword("te$t$tudent");

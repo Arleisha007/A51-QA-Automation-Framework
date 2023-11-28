@@ -10,6 +10,7 @@ public class Homework24 extends BaseTest{
     public void loginValidEmailPassword(){
 
         //Steps
+        String BaseURL = null;
         navigateToLoginPage(BaseURL);
         provideEmail("demo@class.com");
         providePassword("te$t$tudent");
